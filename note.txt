@@ -1,0 +1,27 @@
+1. new 각각의 객체별로 모델 스키마 -> 객체
+2. 스키마를 바탕으로 model 만들어주기
+3. API = man in the middle
+4. API = Application Programming interface
+5. 외부에서 files 불러올떄는 await로 사용해서 불러와주기
+6. 항상 Postman으로 실제적으로 만들어졌는지 확인 제대로하기
+7. create로 DB를 생성한경우에는 따로 save해줄필요가없음
+8. app.use(express.json()); middleware 넣어줘야 파일을 로드할수있게돔
+9. MongoDB는 항상 스스로 _id를 직접만들어줌 
+10. 항상 업데이트하고 {new:true} 넣어주기
+11. 에러핸들링은 필수
+12. mongoose.Types.ObjectId -> MongoDb에서 PI 처럼 작동함
+13. router, controller design pattern
+
+--------------------------------------------------------------
+1.백엔드랑 프론트엔드 넣어줘야하는값들 맞춰주기
+2. Zustand로 상태관리해주기
+3. Zustand File 이름은 store로 넣어주기
+4. 클라이언트에서 서버 보낼때 : body: JSON.stringify(productInfo),
+5. 서버에서 클라이언트로 보낼때 : res.json 
+6. 문제에 접근할때는 
+문제를 이해 ->문제분석 ->문제해결시도 -> 해결책 설계 ->검증 및 개선 ->
+--------------------------------------------------------------
+1.삭제후에 상태 업데이트해줄것
+2.UI에서도 상태업데이트하고 다시 불러와줄것
+3. 시간걸리는건 항상 async로 데이트 업데이트하는 시간 맞춰주기
+4. 백엔드 쪽에서 로직으로 지워주고 <-> 프론트쪽에서 제 랜더링해주면된다.

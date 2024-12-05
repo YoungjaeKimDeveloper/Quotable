@@ -29,3 +29,5 @@
 --Quotable 계획--
 1.✅ 서버를 만든다
 2. DB를 연결한다
+3. Quote Model만들기
+4. Model를 바탕으로 실제 Quote만들어보기

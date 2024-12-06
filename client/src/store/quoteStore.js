@@ -15,13 +15,21 @@ export const quoteStore = create((set) => ({
       console.log("ERROR");
     }
   },
-  uploadQuote: async (quoteInfo) => {
+  createQuote: async (quoteInfo) => {
     try {
-      const res = await fetch("/api/quote/create",{
-        
-      })
-    } catch (error) {
+      const res = await fetch("/api/quote/create", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        body: JSON.stringify(quoteInfo),
+      });
+      const newQuote = res.json();
 
+      return { success: true, newQuote: newQuote };
+    } catch (error) {
+      console.error(error.message);
+      return { success: false, message: error.message };
     }
   },
 }));

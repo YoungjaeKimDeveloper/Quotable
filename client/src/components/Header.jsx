@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPlusSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="lg:px-100 px-[10%] py-4">
@@ -8,7 +9,9 @@ const Header = () => {
           Quotable
         </h1>
         <div className="rounded-x rounded-xl p-2 duration-300 hover:cursor-pointer hover:bg-[#ffffcc]">
-          <FaPlusSquare />
+          <Link to={"/create"}>
+            <FaPlusSquare />
+          </Link>
         </div>
       </div>
     </div>

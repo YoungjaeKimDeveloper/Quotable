@@ -8,3 +8,9 @@
     padding: 0;
   }
 }
+
+@layer components {
+  .input-info {
+    @apply rounded-xl py-3 pl-2 font-semibold tracking-wider text-pink-400 focus:outline-none;
+  }
+}

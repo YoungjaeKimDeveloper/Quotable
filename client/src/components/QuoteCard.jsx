@@ -8,7 +8,7 @@ const QuoteCard = ({ quote }) => {
     <div className="w-full text-white shadow-xl lg:w-[30%]">
       <div className="rounded-xl border-2 border-solid border-white p-4">
         <img
-          src={sample}
+          src={image || sample}
           alt="image"
           className="h-[200px] w-full rounded-lg bg-cover sm:object-contain lg:object-fill lg:shadow-xl"
         />

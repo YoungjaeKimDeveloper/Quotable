@@ -12,7 +12,7 @@ export const quoteStore = create((set) => ({
       set({ quotes: data.quotes });
       return { success: true };
     } catch (error) {
-      console.log("ERROR");
+      console.log("ERROR", error.message);
     }
   },
   createQuote: async (quoteInfo) => {

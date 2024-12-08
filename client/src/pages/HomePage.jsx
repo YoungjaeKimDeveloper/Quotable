@@ -6,7 +6,8 @@ const HomePage = () => {
   const { quotes, getQuotes } = quoteStore();
   useEffect(() => {
     getQuotes();
-  }, []);
+    console.info("All Files have been fetched");
+  }, [getQuotes]);
 
   console.log(quotes);
   return (

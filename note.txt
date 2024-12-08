@@ -36,3 +36,21 @@
 
 6. Create Function 백엔드로 보내기
 7. 음악 재생되게 하기
+8. toast 기능 넣어주기
+
+----------------------
++ animation
++ enzyme 
+* Jest
++ Unit 
++ material UI
+
++ No RDMS VS RDMS 
+--> Old company user the SQL to identify the relationship of the DATA 
+==>too many relationships then we use the sQL REMDS
+--> leetcode 100  
+50 easy
+20 midemum 
+10 hard 
+clone project very good project
+NOn-funcitonal functional 

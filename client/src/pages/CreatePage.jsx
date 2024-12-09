@@ -43,7 +43,7 @@ const CreatePage = () => {
 
           <svg
             aria-hidden="true"
-            class="size-20 animate-spin fill-pink-300 text-gray-200 dark:text-gray-900"
+            className="size-20 animate-spin fill-pink-300 text-gray-200 dark:text-gray-900"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const CreatePage = () => {
               fill="currentFill"
             />
           </svg>
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center pt-10">
@@ -72,7 +72,7 @@ const CreatePage = () => {
               placeholder="Title..."
               value={newQuote.title}
               minLength={1}
-              maxLength={30}
+              maxLength={100}
               required
               onChange={(e) =>
                 setNewQuote((prev) => ({ ...prev, title: e.target.value }))

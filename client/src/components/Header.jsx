@@ -50,7 +50,6 @@ const Header = () => {
               ref={audioRef}
               src="../../public/music.mp3"
               type="audio/mp3"
-              autoPlay
             />
           </div>
         </div>

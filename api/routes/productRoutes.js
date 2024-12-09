@@ -27,10 +27,7 @@ router.post("/create", async (req, res) => {
 router.get("/quotes", async (req, res) => {
   try {
     const quotes = await Quote.find({});
-    if (quotes.length === 0) {
-      console.error("THERE IS NO QUOTE");
-      return res.status(400).json({ success: false, message: "NO QUOTES" });
-    }
+
     return res.status(200).json({ success: true, quotes: quotes });
   } catch (error) {
     console.error("FAILED TO GET QUOTES: ", error.message);

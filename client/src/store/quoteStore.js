@@ -32,4 +32,21 @@ export const quoteStore = create((set) => ({
       return { success: false, message: error.message };
     }
   },
+  deleteQuote: async (pid) => {
+    try {
+      const res = await fetch(`/api/quote/${pid}`, {
+        method: "DELETE",
+      });
+      const deletedQuote = res.json();
+      const filteredList = quotes.filter((quote) => quote._id !== quote.pid);
+      set({ quotes: filteredList });
+      return { success: true, quote: deletedQuote };
+    } catch (error) {
+      console.error("ERROR IN DELETING ITEM", error.message);
+      return {
+        success: false,
+        message: `Failed to delete Message :${error.message} `,
+      };
+    }
+  },
 }));

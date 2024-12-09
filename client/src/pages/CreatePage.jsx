@@ -14,7 +14,7 @@ const CreatePage = () => {
     image: "",
   });
   // 제출하면 알람주기
-  const addedNotify = () => toast(`"${newQuote.title}" Added 😘  `);
+  const addedNotify = () => toast(`${newQuote.title} Added 😘  `);
   const navigate = useNavigate();
   // CreateQuoteSubmit
   const createQuoteSubmit = async (e) => {

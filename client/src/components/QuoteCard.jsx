@@ -2,10 +2,14 @@ import React from "react";
 import sample from "../../public/fox.webp";
 import { MdDeleteOutline } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
-import { quoteStore } from "../store/quoteStore";
-const QuoteCard = ({ quote }) => {
+import { toast } from "react-toastify";
+const QuoteCard = ({ quote, deleteQuote }) => {
   const { title, author, image } = quote;
-  const { deleteQuote } = quoteStore();
+  const deleteNotify = (quote) => toast(`${quote.title} has been deleted🥹`);
+  const deleteQuoteCard = (quote) => {
+    deleteQuote(quote._id);
+    deleteNotify(quote);
+  };
   return (
     <div className="w-full text-white shadow-xl lg:w-[30%]">
       <div className="rounded-xl border-2 border-solid border-white p-4">
@@ -26,7 +30,7 @@ const QuoteCard = ({ quote }) => {
               <MdEdit className="size-7 rounded-xl border-solid bg-red-300 p-1 text-center text-xl shadow-lg hover:cursor-pointer lg:text-2xl" />
               <MdDeleteOutline
                 className="size-7 rounded-xl border-solid bg-red-300 p-1 text-center text-xl shadow-lg hover:cursor-pointer lg:text-2xl"
-                onClick={() => deleteQuote(quote._id)}
+                onClick={() => deleteQuoteCard(quote)}
               />
             </div>
           </div>

@@ -3,11 +3,11 @@ import { quoteStore } from "../store/quoteStore.js";
 import QuoteCard from "../components/QuoteCard.jsx";
 import { Link } from "react-router-dom";
 const HomePage = () => {
-  const { quotes, getQuotes } = quoteStore();
+  const { quotes, getQuotes, deleteQuote } = quoteStore();
   useEffect(() => {
     getQuotes();
     console.info("All Files have been fetched");
-  }, [getQuotes]);
+  }, [getQuotes, deleteQuote]);
 
   console.log(quotes);
   return (
@@ -26,7 +26,7 @@ const HomePage = () => {
           </div>
         )}
         {quotes?.map((quote) => (
-          <QuoteCard key={quote._id} quote={quote} />
+          <QuoteCard key={quote._id} quote={quote} deleteQuote={deleteQuote} />
         ))}
       </div>
     </div>

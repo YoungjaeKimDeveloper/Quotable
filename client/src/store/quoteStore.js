@@ -37,9 +37,10 @@ export const quoteStore = create((set) => ({
       const res = await fetch(`/api/quote/${pid}`, {
         method: "DELETE",
       });
-      const deletedQuote = res.json();
-      const filteredList = quotes.filter((quote) => quote._id !== quote.pid);
-      set({ quotes: filteredList });
+      const deletedQuote = await res.json();
+      set((state) => ({
+        quotes: state.quotes.filter((product) => product._id !== pid),
+      }));
       return { success: true, quote: deletedQuote };
     } catch (error) {
       console.error("ERROR IN DELETING ITEM", error.message);
